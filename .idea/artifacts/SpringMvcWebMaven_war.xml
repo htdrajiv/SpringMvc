@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="SpringMvcWebMaven:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SpringMvcWebMaven.war">
+      <element id="artifact" artifact-name="SpringMvcWebMaven:war exploded" />
+    </root>
+  </artifact>
+</component>
