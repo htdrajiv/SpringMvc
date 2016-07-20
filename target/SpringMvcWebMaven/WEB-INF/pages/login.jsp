@@ -13,8 +13,8 @@
 </head>
 <body>
 
-<form:form  commandName="submitLogin" action="${pageContext.request.contextPath}/submitLogin" method="post">
-    <table>
+<form:form  commandName="submitLogin" action="${pageContext.request.contextPath}/login/submitLogin" method="post">
+    <table class="mainLoginTable">
         <thead>
         <th colspan="2">
             Login Form
@@ -22,16 +22,20 @@
         </thead>
         <tr>
             <td>User Name: </td>
-            <td><input type="text" name="uname"/></td>
+            <td><input type="text" name="uname" required="required"/></td>
         </tr>
         <tr>
             <td>Password: </td>
-            <td><input type="password" name="pass"></td>
+            <td><input type="password" name="pass" required="required"></td>
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" value="submit"/>
+                <input type="submit" value="Login"/>
+                <a href="${pageContext.request.contextPath}/user/addNewUser">Add New User</a>
             </td>
+        </tr>
+        <tr>
+            <td><a href="${pageContext.request.contextPath}/user/userList" >Show User List</a></td>
         </tr>
     </table>
 </form:form>

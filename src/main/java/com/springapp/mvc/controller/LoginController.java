@@ -15,7 +15,7 @@ import java.sql.SQLException;
  * Created by Rajiv on 7/16/2016.
  */
 @Controller
-@RequestMapping(value = "/")
+@RequestMapping(value = "/login")
 public class LoginController {
     @RequestMapping(value = "/loginForm",method = RequestMethod.GET)
     public ModelAndView login(){
