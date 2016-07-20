@@ -37,21 +37,26 @@ public class UserAccess {
                     rs.getString("password")
             );
         }
-        dataSource.closeConnection();
+//        dataSource.closeConnection();
+        connection.close();
         return user;
     }
 
-    public boolean addUser(User user){
+    public boolean addUser(User user) throws SQLException {
         boolean status = true;
+        Connection connection = dataSource.getConnection();
         try{
-            Connection connection = dataSource.getConnection();
             String query = "insert into user (firstName, lastName, userName, password) values ('"+user.getFirstName()+"', '"+user.getLastName()+"', " +
                     "'"+user.getUserName()+"', '"+user.getPassword()+"')";
             PreparedStatement ps = connection.prepareStatement(query);
             status = ps.execute();
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+            connection.close();
+//            dataSource.closeConnection();
         }
+
         return status;
     }
 
@@ -72,7 +77,8 @@ public class UserAccess {
             users.add(user);
             user = null;
         }
-        dataSource.closeConnection();
+//        dataSource.closeConnection();
+        connection.close();
         return users;
     }
 

@@ -8,40 +8,43 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title></title>
+    <title></title>
 </head>
 <body>
 <form name="addUserForm" onsubmit="return checkPassword();" action="${pageContext.request.contextPath}/user/saveUser">
-  <table>
-    <tr>
-      <td>Add New User</td>
-    </tr>
-    <tr>
-      <td> First Name: </td>
-      <td> <input type="text" name="firstName" required="required"/></td>
-    </tr>
-    <tr>
-      <td> Last Name: </td>
-      <td> <input type="text" name="lastName" required="required"/></td>
-    </tr>
-    <tr>
-      <td> Username: </td>
-      <td> <input type="text" name="userName" required="required"/></td>
-    </tr>
-    <tr>
-      <td> Password: </td>
-      <td> <input type="password" id="password" name="password" required="required"/> </td>
-    </tr>
-      <tr>
-          <td> Retype Password: </td>
-          <td> <input type="password" id="matchPassword" name="matchPassword" required="required"/> </td>
-      </tr>
-    <tr>
-      <td colspan="2">
-        <input type="submit" value="submit" />
-      </td>
-    </tr>
-  </table>
+    <table>
+        <tr>
+            <td>Add New User</td>
+        </tr>
+        <tr>
+            <td> First Name: </td>
+            <td> <input type="text" name="firstName" required="required"/></td>
+        </tr>
+        <tr>
+            <td> Last Name: </td>
+            <td> <input type="text" name="lastName" required="required"/></td>
+        </tr>
+        <tr>
+            <td> Username: </td>
+            <td> <input type="text" name="userName" required="required"/></td>
+        </tr>
+        <tr>
+            <td> Password: </td>
+            <td> <input type="password" id="password" name="password" required="required"/> </td>
+        </tr>
+        <tr>
+            <td> Retype Password: </td>
+            <td> <input type="password" id="matchPassword" name="matchPassword" required="required"/> </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="submit" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="${pageContext.request.contextPath}/login/loginForm" >Go To Login Page</a></td>
+        </tr>
+    </table>
 </form>
 </body>
 <script type="text/javascript">

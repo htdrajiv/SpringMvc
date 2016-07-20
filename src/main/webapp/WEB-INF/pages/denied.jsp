@@ -11,6 +11,7 @@
     <title></title>
 </head>
 <body>
-Request denied
+Request denied <br/>
+<a href="${pageContext.request.contextPath}/login/loginForm" >Go To Login Page</a>
 </body>
 </html>

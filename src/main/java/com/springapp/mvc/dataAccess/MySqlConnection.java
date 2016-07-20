@@ -19,7 +19,7 @@ public class MySqlConnection {
         try{
             connection = dataSource.getConnection();
         }catch(SQLException e){
-
+            System.out.println("cannot get connection for data source");
         }finally {
 
         }
@@ -31,7 +31,7 @@ public class MySqlConnection {
             try{
                 this.connection.close();
             }catch (SQLException e){
-
+                System.out.println("Error in closing connection");
             }
         }
     }
