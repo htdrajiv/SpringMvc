@@ -11,7 +11,7 @@
     <title></title>
 </head>
 <body>
-<form name="addUserForm" onsubmit="return checkPassword();" action="${pageContext.request.contextPath}/user/saveUser">
+<form name="addUserForm" onsubmit="return checkPassword();" action="${pageContext.request.contextPath}/admin/saveUser">
     <table>
         <tr>
             <td>Add New User</td>

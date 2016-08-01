@@ -31,11 +31,11 @@
         <tr>
             <td colspan="2">
                 <input type="submit" value="Login"/>
-                <a href="${pageContext.request.contextPath}/user/addNewUser">Add New User</a>
+                <a href="${pageContext.request.contextPath}/admin/addNewUser">Add New User</a>
             </td>
         </tr>
         <tr>
-            <td><a href="${pageContext.request.contextPath}/user/userList" >Show User List</a></td>
+            <td><a href="${pageContext.request.contextPath}/admin/userList" >Show User List</a></td>
         </tr>
     </table>
 </form:form>

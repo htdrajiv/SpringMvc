@@ -15,7 +15,7 @@ import java.util.List;
  * Created by Rajiv on 7/18/2016.
  */
 @Controller
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/admin")
 public class UserController {
     @RequestMapping(value = "/addNewUser", method = RequestMethod.GET)
     public ModelAndView addNewUser(){
@@ -27,7 +27,7 @@ public class UserController {
     public String saveUser(User user) throws SQLException {
         UserAccess userAccess = new UserAccess();
         userAccess.addUser(user);
-        return "redirect:/user/userList";
+        return "redirect:/admin/userList";
     }
 
     @RequestMapping(value = "/userList")
